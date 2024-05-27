@@ -57,7 +57,7 @@ let checkWin = () => {
     // console.log(`pos2: ${pos2}`);
     pos3 = box[pattern[2]].innerText;
     // console.log(`pos3: ${pos3}`);
-    if (pos1 == pos2 && pos2 == pos3 && pos1 == pos3) {
+    if (pos1 == pos2 && pos2 == pos3 && pos1 == pos3 && i<=9) {
       // console.log(`win : ${pos1}, ${pos2}, ${pos3}`);
       if (pos1 == "X") {
         winner.innerText = "Winner is X";
@@ -71,7 +71,7 @@ let checkWin = () => {
         disableBox();
       }
     } else {
-      if (i == 9) {
+      if (i >= 9) {
         winner.innerText = "DRAW";
         winner.style.display = "block";
       }
